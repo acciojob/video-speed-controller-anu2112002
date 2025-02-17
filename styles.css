@@ -1,2 +1,70 @@
 
 /* Your CSS Code here. */
+/* styles.css */
+
+body {
+  font-family: sans-serif;
+  background: #ddd;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.player {
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  border: 5px solid #000;
+  position: relative;
+  background: #fff;
+}
+
+.player__video {
+  width: 100%;
+}
+
+.player__controls {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(0,0,0,0.1);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: all 0.3s;
+}
+
+.player:hover .player__controls {
+  transform: translateY(0);
+}
+
+.player__button,
+.player__slider {
+  background: none;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+  color: #000;
+}
+
+.player__slider {
+  width: 10%;
+}
+
+.progress {
+  flex: 10;
+  display: flex;
+  height: 5px;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.progress__filled {
+  width: 50%;
+  background: #f00;
+  flex-basis: 0;
+  flex-grow: 1;
+  transition: width 0.1s;
+}
